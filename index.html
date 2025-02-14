@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tek Sayfa Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: pink;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        #kadroListesi, #tablo {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2; /* Başlık satırı arka plan rengi */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SANAYİİ AİLE SAĞLIĞI MERKEZİ</h1>
+
+    <button onclick="kadroyuGoster()">Kadromuz</button>
+    <button onclick="tabloyuGoster()">Tablo</button>
+
+    <div id="kadroListesi"></div>
+    <div id="tablo"></div>
+
+    <script>
+        function kadroyuGoster() {
+            const kadroListesi = document.getElementById("kadroListesi");
+            kadroListesi.innerHTML = `
+                <p>Dr.Gökhan Yılmaz</p>
+                <p>Dr.Fatih Albayrak</p>
+                <p>Dr.Nargiza Gülünay</p>
+            `;
+        }
+
+        function tabloyuGoster() {
+            const tabloDiv = document.getElementById("tablo");
+            const tabloHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ÇALIŞMA SAATLERİ</th>
+                            <th>PAZARTESİ</th>
+                            <th>SALI</th>
+                            <th>ÇARŞAMBA</th>
+                            <th>PERŞEMBE</th>
+                            <th>CUMA</th>
+                            <th>AİLE HEKİMİNİN HAFTALIK ÇALIŞMA SAATLERİ TOPLAMI</th>
+                            <th>ASM NİN HAFTALIK TOPLAM HİZMET VERME SÜRESİ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UZM.DR GÖKHAN YILMAZ</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>10:00-13:00 14:00-19:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>TOPLAM 40 SAAT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>DR.NARGİZA GÜLÜNAY</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>TOPLAM 40 SAAT</td>
+                            <td>ASM TOPLAM 49 SAAT</td>
+                        </tr>
+                        <tr>
+                            <td>DR.FATİH ALBAYRAK</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>08:00-12:00 13:00-17:00</td>
+                            <td>TOPLAM 40 SAAT</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+            tabloDiv.innerHTML = tabloHTML;
+        }
+    </script>
+
+</body>
+</html>
